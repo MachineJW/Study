@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include<string.h> // ¹®ÀÚ¿­ °ü·Ã ÇÔ¼ö ¿øÇüÀ» ¸ð¾Æ³õÀº Çì´õ ÆÄÀÏ ºÒ·¯¿À±â 
+#include<string.h> // ë¬¸ìžì—´ ê´€ë ¨ í•¨ìˆ˜ ì›í˜•ì„ ëª¨ì•„ë†“ì€ í—¤ë” íŒŒì¼ ë¶ˆëŸ¬ì˜¤ê¸° 
 
 void CharAry1();
 void CharAry2();
@@ -8,33 +8,33 @@ void CharAry4();
 
 void main()
 {
-	printf("[char array ±âÃÊ]\n");
+	printf("[char array ê¸°ì´ˆ]\n");
 	CharAry1();
-	printf("\n[¹®ÀÚ¿­À» ´ëÀÔÇÏ´Â strcpy ÇÔ¼ö]");
+	printf("\n[ë¬¸ìžì—´ì„ ëŒ€ìž…í•˜ëŠ” strcpy í•¨ìˆ˜]");
 	CharAry2();
-	printf("\n[¹®ÀÚ¿­ Àü¿ë ÀÔÃâ·Â ÇÔ¼ö gets,puts]");
+	printf("\n[ë¬¸ìžì—´ ì „ìš© ìž…ì¶œë ¥ í•¨ìˆ˜ gets,puts]");
 	CharAry3();
-	printf("\n[¾ËÆÄºª ´ë¹®ÀÚ¸¦ ¼Ò¹®ÀÚ·Î,¼Ò¹®ÀÚ¸¦ ´ë¹®ÀÚ·Î ¹Ù²Ù´Â ÇÁ·Î±×·¥]\n");
+	printf("\n[ì•ŒíŒŒë²³ ëŒ€ë¬¸ìžë¥¼ ì†Œë¬¸ìžë¡œ,ì†Œë¬¸ìžë¥¼ ëŒ€ë¬¸ìžë¡œ ë°”ê¾¸ëŠ” í”„ë¡œê·¸ëž¨]\n");
 	CharAry4();
 }
-/*NULL: char ¹è¿­¿¡¼­ ³²´Â ¹è¿­ ¿ä¼Ò¿¡ ÀÚµ¿À¸·Î NULL¹®ÀÚ°¡ µé¾î°£´Ù. ¾Æ½ºÅ° ÄÚµå °ªÀÌ 0ÀÎ ¹®ÀÚ°¡ µé¾î°£´Ù. 
- ³Î ¹®ÀÚ´Â ¹®ÀÚ¿­ÀÇ ³¡À» Ç¥½ÃÇÏ´Â ¿ëµµ·Î ¾²ÀÎ´Ù. printf ÇÔ¼ö´Â charÇü ¹è¿­¿¡¼­ ³Î ¹®ÀÚ°¡ ³ª¿Ã ¶§±îÁö¸¸ Ãâ·ÂÇÏµµ·Ï ¸¸µé¾îÁ®ÀÖ´Ù.
- sanfÇÔ¼ö´Â ÀÔ·Â ¹®ÀÚ ¸¶Áö¸·¿¡  ÀÚµ¿À¸·Î null ¹®ÀÚ°¡ Ã¤¿öÁø´Ù. ÀÌ·¯ÇÑ ±ÔÄ¢Àº ¹®ÀÚ¿­À» Ã³¸®ÇÏ´Â ¸ðµç ÇÔ¼ö¿¡ Àû¿ëµÈ´Ù.*/ 
+/*NULL: char ë°°ì—´ì—ì„œ ë‚¨ëŠ” ë°°ì—´ ìš”ì†Œì— ìžë™ìœ¼ë¡œ NULLë¬¸ìžê°€ ë“¤ì–´ê°„ë‹¤. ì•„ìŠ¤í‚¤ ì½”ë“œ ê°’ì´ 0ì¸ ë¬¸ìžê°€ ë“¤ì–´ê°„ë‹¤. 
+ ë„ ë¬¸ìžëŠ” ë¬¸ìžì—´ì˜ ëì„ í‘œì‹œí•˜ëŠ” ìš©ë„ë¡œ ì“°ì¸ë‹¤. printf í•¨ìˆ˜ëŠ” charí˜• ë°°ì—´ì—ì„œ ë„ ë¬¸ìžê°€ ë‚˜ì˜¬ ë•Œê¹Œì§€ë§Œ ì¶œë ¥í•˜ë„ë¡ ë§Œë“¤ì–´ì ¸ìžˆë‹¤.
+ sanfí•¨ìˆ˜ëŠ” ìž…ë ¥ ë¬¸ìž ë§ˆì§€ë§‰ì—  ìžë™ìœ¼ë¡œ null ë¬¸ìžê°€ ì±„ì›Œì§„ë‹¤. ì´ëŸ¬í•œ ê·œì¹™ì€ ë¬¸ìžì—´ì„ ì²˜ë¦¬í•˜ëŠ” ëª¨ë“  í•¨ìˆ˜ì— ì ìš©ëœë‹¤.*/ 
 void CharAry1()
 {
 	char str[10]="network";
 	
-	printf("ÃÖÃÊ ¹®ÀÚ¿­ : %s",str);
-	printf("\n¹®ÀÚ¿­ ÀÔ·Â :");
+	printf("ìµœì´ˆ ë¬¸ìžì—´ : %s",str);
+	printf("\në¬¸ìžì—´ ìž…ë ¥ :");
 	scanf("%s",str);
-	// scanf¿¡¼­ &¸¦ »ç¿ëÇÏÁö ¾ÊÀº ÀÌÀ¯´Â?? &´Â ÇØ´ç º¯¼öÀÇ ÁÖ¼Ò¸¦ °¡¸®Å°´Â ¿ªÇÒ,
-	// scanf ±¸µ¿ ¹æ½Ä : ÀÔ·Â -> ·¹Áö½ºÅÍ ÀÓ½ÃÀúÀå -> º¯¼öÀÇ ÁÖ¼Ò·Î Ã£¾Æ°¡ ÁÖ¼Ò°¡ °¡¸®Å°´Â ¸Þ¸ð¸®ÀÇ ·¹Áö½ºÅÍ¿¡ ÀúÀå -> ·¹Áö½ºÅÍ¿¡ ÀÖ´ø °ªÀº Áö¿ò 
-	// int³ª double°ú °°Àº µ¥ÀÌÅÍÇüÀº º¯¼öÀÇ ÁÖ¼Ò°¡ ÇÊ¿äÇÏ±â ¶§¹®¿¡ &¸¦ ½áÁÖ¾î¾ß ÇÑ´Ù.
-	// ÇÏÁö¸¸ ¹®ÀÚ¹è¿­°ú °°Àº µ¥ÀÌÅÍÇüÀº º¯¼ö ÀÚÃ¼°¡ ÁÖ¼ÒÀÌ±â ¶§¹®¿¡ ¾È½áµµ µÈ´Ù.(Æ÷ÀÎÅÍ ÀÏ ¶§µµ ¸¶Âù°¡Áö)  
-	printf("\nÀÔ·Â µÈ ¹®ÀÚ¿­ : %s",str);
+	// scanfì—ì„œ &ë¥¼ ì‚¬ìš©í•˜ì§€ ì•Šì€ ì´ìœ ëŠ”?? &ëŠ” í•´ë‹¹ ë³€ìˆ˜ì˜ ì£¼ì†Œë¥¼ ê°€ë¦¬í‚¤ëŠ” ì—­í• ,
+	// scanf êµ¬ë™ ë°©ì‹ : ìž…ë ¥ -> ë ˆì§€ìŠ¤í„° ìž„ì‹œì €ìž¥ -> ë³€ìˆ˜ì˜ ì£¼ì†Œë¡œ ì°¾ì•„ê°€ ì£¼ì†Œê°€ ê°€ë¦¬í‚¤ëŠ” ë©”ëª¨ë¦¬ì˜ ë ˆì§€ìŠ¤í„°ì— ì €ìž¥ -> ë ˆì§€ìŠ¤í„°ì— ìžˆë˜ ê°’ì€ ì§€ì›€ 
+	// intë‚˜ doubleê³¼ ê°™ì€ ë°ì´í„°í˜•ì€ ë³€ìˆ˜ì˜ ì£¼ì†Œê°€ í•„ìš”í•˜ê¸° ë•Œë¬¸ì— &ë¥¼ ì¨ì£¼ì–´ì•¼ í•œë‹¤.
+	// í•˜ì§€ë§Œ ë¬¸ìžë°°ì—´ê³¼ ê°™ì€ ë°ì´í„°í˜•ì€ ë³€ìˆ˜ ìžì²´ê°€ ì£¼ì†Œì´ê¸° ë•Œë¬¸ì— ì•ˆì¨ë„ ëœë‹¤.(í¬ì¸í„° ì¼ ë•Œë„ ë§ˆì°¬ê°€ì§€)  
+	printf("\nìž…ë ¥ ëœ ë¬¸ìžì—´ : %s",str);
 	
-	//char ¹è¿­ ¼±¾ð ½Ã ÃÊ±âÈ­¸¦ ÇÏ¸é ³²´Â ¹è¿­¿ä¼Ò°¡ ÀÚµ¿À¸·Î ¹®ÀÚ¿­ ³¡¿¡ ³Î ¹®ÀÚ°¡ ÀúÀåµÇ³ª,
-	//ÃÊ±âÈ­ ÇÏÁö ¾ÊÀº »óÅÂ¿¡¼­, ¹è¿­¿ä¼Ò¿¡ ¹®ÀÚ¸¦ Á÷Á¢ ´ëÀÔÇÑ´Ù¸é ¹Ýµå½Ã ¹®ÀÚ¿­ ³¡¿¡ '/0'(³Î¹®ÀÚ)¸¦ ÀÔ·ÂÇØ¾ßÇÑ´Ù.
+	//char ë°°ì—´ ì„ ì–¸ ì‹œ ì´ˆê¸°í™”ë¥¼ í•˜ë©´ ë‚¨ëŠ” ë°°ì—´ìš”ì†Œê°€ ìžë™ìœ¼ë¡œ ë¬¸ìžì—´ ëì— ë„ ë¬¸ìžê°€ ì €ìž¥ë˜ë‚˜,
+	//ì´ˆê¸°í™” í•˜ì§€ ì•Šì€ ìƒíƒœì—ì„œ, ë°°ì—´ìš”ì†Œì— ë¬¸ìžë¥¼ ì§ì ‘ ëŒ€ìž…í•œë‹¤ë©´ ë°˜ë“œì‹œ ë¬¸ìžì—´ ëì— '/0'(ë„ë¬¸ìž)ë¥¼ ìž…ë ¥í•´ì•¼í•œë‹¤.
 	
 	char str2[10];
 	str2[0]='n';
@@ -48,33 +48,33 @@ void CharAry1()
 	
 	printf("\nstr2 = %s\n",str2);
 }
-/*strcpy ÇÔ¼ö´Â charÇü ¹è¿­¿¡ »õ·Î¿î ¹®ÀÚ¿­À» ÀúÀåÇÏ´Â ÇÔ¼ö·Î, ÀúÀåÇÒ ¹®ÀÚ¿­ÀÇ ±æÀÌ¸¦ ÆÄ¾ÇÇÏ¿© µü ±× ±æÀÌ ¸¸Å­¸¸ charÇü ¹è¿­¿¡
-  º¹»çÇÑ´Ù. ´ç¿¬ÇÏ°Ôµµ ¹®ÀÚ¿­ ³¡¿¡ ÀÚµ¿À¸·Î ³Î ¹®ÀÚµµ ºÙ¿© ÁØ´Ù.*/
+/*strcpy í•¨ìˆ˜ëŠ” charí˜• ë°°ì—´ì— ìƒˆë¡œìš´ ë¬¸ìžì—´ì„ ì €ìž¥í•˜ëŠ” í•¨ìˆ˜ë¡œ, ì €ìž¥í•  ë¬¸ìžì—´ì˜ ê¸¸ì´ë¥¼ íŒŒì•…í•˜ì—¬ ë”± ê·¸ ê¸¸ì´ ë§Œí¼ë§Œ charí˜• ë°°ì—´ì—
+  ë³µì‚¬í•œë‹¤. ë‹¹ì—°í•˜ê²Œë„ ë¬¸ìžì—´ ëì— ìžë™ìœ¼ë¡œ ë„ ë¬¸ìžë„ ë¶™ì—¬ ì¤€ë‹¤.*/
 
 void CharAry2()
 {
 	char str1[20] = "network";
 	char str2[20];
-	// strcpy »ç¿ë¹ý : strcpy(ÀúÀåµÉ ¹è¿­¸í, ÀúÀåÇÒ ¹®ÀÚ¿­) ´ëÀÔÇÏ´Â ¿¬»êÀ¸·Î »ý°¢ÇØµµ ¹«³­ÇÏ´Ù. 
-	strcpy(str1,"OSI7Layer"); // str1 ¹è¿­¿¡ "OSI7Layer"¸¦ º¹»ç 
-	strcpy(str2,str1); // str2 ¹è¿­¿¡ str1 ¹è¿­À» º¹»ç 
+	// strcpy ì‚¬ìš©ë²• : strcpy(ì €ìž¥ë  ë°°ì—´ëª…, ì €ìž¥í•  ë¬¸ìžì—´) ëŒ€ìž…í•˜ëŠ” ì—°ì‚°ìœ¼ë¡œ ìƒê°í•´ë„ ë¬´ë‚œí•˜ë‹¤. 
+	strcpy(str1,"OSI7Layer"); // str1 ë°°ì—´ì— "OSI7Layer"ë¥¼ ë³µì‚¬ 
+	strcpy(str2,str1); // str2 ë°°ì—´ì— str1 ë°°ì—´ì„ ë³µì‚¬ 
 	printf("\nstr1 = %s, str2 = %s\n",str1,str2);
 }
 
-/*¹®ÀÚ¿­ Àü¿ë ÀÔÃâ·Â ÇÔ¼ö*/
-// scnaf ÇÔ¼ö´Â ºóÄ­ÀÌ ÀÖÀ»¶§ ºóÄ­ Àü±îÁö ¸¸ ÀÔ·ÂµÈ´Ù. µû¶ó¼­ ºóÄ­À» Æ÷ÇÔÇÑ »õ·Î¿î ¹®ÀÚ¿­ ÀÔ·Â ¹æ½ÄÀÌ ÇÊ¿äÇÏ´Ù. 
+/*ë¬¸ìžì—´ ì „ìš© ìž…ì¶œë ¥ í•¨ìˆ˜*/
+// scnaf í•¨ìˆ˜ëŠ” ë¹ˆì¹¸ì´ ìžˆì„ë•Œ ë¹ˆì¹¸ ì „ê¹Œì§€ ë§Œ ìž…ë ¥ëœë‹¤. ë”°ë¼ì„œ ë¹ˆì¹¸ì„ í¬í•¨í•œ ìƒˆë¡œìš´ ë¬¸ìžì—´ ìž…ë ¥ ë°©ì‹ì´ í•„ìš”í•˜ë‹¤. 
 void CharAry3()
-{	// Q: ¿Ö gets,puts¸¦ »ç¿ëÇÒ¼ö ¾øÀ»±î!!!!????? 
+{	// Q: ì™œ gets,putsë¥¼ ì‚¬ìš©í• ìˆ˜ ì—†ì„ê¹Œ!!!!????? 
 	char str[80];
-	printf("\n¹®ÀÚ¿­ ÀÔ·Â: ");
+	printf("\në¬¸ìžì—´ ìž…ë ¥: ");
 	gets(str);
-	//printf("\nprintf ÀÔ·ÂµÈ ¹®ÀÚ¿­: %s",str);
-	puts("\nputs ÀÔ·ÂµÈ ¹®ÀÚ¿­: ");
+	//printf("\nprintf ìž…ë ¥ëœ ë¬¸ìžì—´: %s",str);
+	puts("\nputs ìž…ë ¥ëœ ë¬¸ìžì—´: ");
 	puts(str);
 }
 
 
-/* ´ë¹®ÀÚ´Â  ¼Ò¹®ÀÚ·Î, ¼Ò¹®ÀÚ´Â ´ë¹®ÀÚ·Î º¯È¯ÇÏ´Â ÇÁ·Î±×·¥ */	
+/* ëŒ€ë¬¸ìžëŠ”  ì†Œë¬¸ìžë¡œ, ì†Œë¬¸ìžëŠ” ëŒ€ë¬¸ìžë¡œ ë³€í™˜í•˜ëŠ” í”„ë¡œê·¸ëž¨ */	
 void CharAry4()
 {
 	int i;
@@ -82,9 +82,9 @@ void CharAry4()
 	char ary2[50];
 	const int change = 32;
 	
-	printf("\n¹®ÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä,´Ü ¶ç¾î¾²±â´Â ¾È´ï : ");
+	printf("\në¬¸ìžë¥¼ ìž…ë ¥í•˜ì„¸ìš”,ë‹¨ ë„ì–´ì“°ê¸°ëŠ” ì•ˆëŒ : ");
 	scanf("%s",ary1);
-	printf("\nº¯È¯ Àü [%s]",ary1);
+	printf("\në³€í™˜ ì „ [%s]",ary1);
 //	printf("\n[%c]",ary1[0]); 
 //	ary2[0]=ary1[0]+change;
 //	printf("\n[%c]",ary2[0]); 
@@ -92,15 +92,13 @@ void CharAry4()
 
 	for(i=0; i<=50; i++)
 	{
-		if('A' <= ary1[i] <= 'Z')
-		{	
-			ary2[i] = ary1[i]+change;
+		if(('A' <= ary1[i]) && (ary1[i] <= 'Z')) {	
+			ary2[i] = (char)(ary1[i]+change);
 		}
-		else if('a'<= ary1[i] <= 'z')
-		{	
-			ary2[i] = ary1[i]-change;
-		}
-		else if(ary1[i]==0)
+		else if(('a' <= ary1[i]) && (ary1[i] <= 'z')) {	
+			ary2[i] = (char)(ary1[i]-change);
+		} 
+		if(ary1[i]==0)
 		{   
 			ary2[i]=0;
 			break;
@@ -111,6 +109,6 @@ void CharAry4()
 		}
 		
 	}
-	printf("\nº¯È¯ ÈÄ [%s]",ary2);	
+	printf("\në³€í™˜ í›„ [%s]",ary2);	
 }	
 	
