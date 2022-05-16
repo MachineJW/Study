@@ -8,9 +8,9 @@
 # PLAN
 공부할게 많습니다. 요일별로 공부할 것들을 정해야 될 것 같습니다.
 ## MON: C언어
-## TUE: 네트워크, TCP/IP 소켓 프로그래밍
+## TUE: 네트워크, TCP/IP
 ## WED: C언어
-## THU: 네트워크, TCP/IP 소켓 프로그래밍
+## THU: 네트워크, TCP/IP
 ## FRI: ESP32, Arduino, 임베디드
 ## SAT: 휴일
-## SUN: C언어, 네트워크, TCP/IP 소켓 프로그래밍
+## SUN: C언어, 네트워크, TCP/IP
